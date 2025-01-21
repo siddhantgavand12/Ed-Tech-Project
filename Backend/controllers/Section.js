@@ -82,7 +82,7 @@ exports.updateSection = async (req,res) =>{
 }
 
 
-//delete section
+//delete section for deleting section
 
 exports.deleteSection = async (req,res) =>{
     try{
