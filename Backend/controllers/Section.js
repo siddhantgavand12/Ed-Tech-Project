@@ -26,7 +26,25 @@ exports.createSection = async (req, res) => {
       },
       { new: true }
     );
+    
     //HW: use populate to replace section/subsection both in the updatedCourseDetails
+    // const updatedCourseDetails = await Course.findByIdAndUpdate(
+    //   courseID,
+    //   {
+    //     $push: {
+    //       courseContent: newSection._id,
+    //     },
+    //   },
+    //   { new: true }
+    // ).populate({
+    // path: "courseContent",
+    // populate: {
+    // path: "subSections",
+    // model: "Subsection",
+    // },
+    // },
+    // });
+
 
     //return response
     return res.status(200).json({
@@ -95,7 +113,7 @@ exports.deleteSection = async (req,res) =>{
         //return res
         return res.status(200).json({
             seccess:true,
-            message: "Section Updated successfully",
+            message: "Section Deleted successfully",
         });
     }
     catch(error){
